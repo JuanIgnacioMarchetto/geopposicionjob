@@ -1,13 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import LookingForJob from './LookingForJob';
-import LookingForEmployee from './LookingForEmployee';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import LookingForJob from './components/LookingForJob';
+import LookingForEmployee from './components/LookingForEmployee';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
+        <header className="App-header">      
           <Link to="/looking-for-job">
             <button>Looking For Job</button>
           </Link>
@@ -15,8 +15,10 @@ function App() {
             <button>Looking For Employee</button>
           </Link>
 
-          <Route path="/looking-for-job" component={LookingForJob} />
-          <Route path="/looking-for-employee" component={LookingForEmployee} />
+          <Routes>
+            <Route path="/looking-for-job" element={<LookingForJob />} />
+            <Route path="/looking-for-employee" element={<LookingForEmployee />} />
+          </Routes>
         </header>
       </div>
     </Router>
