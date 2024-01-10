@@ -15,7 +15,7 @@ function LookingForEmployee() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes manejar la lógica para enviar los detalles del empleado
+   
     console.log('Detalles del empleado enviados:', employeeDetails);
   };
 
